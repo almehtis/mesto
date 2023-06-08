@@ -1,0 +1,17 @@
+.custom-cursor {
+  pointer-events: none;
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  background-color: #FFF557;
+  border-radius: 50%;
+  mix-blend-mode: exclusion;
+  transform: translate(-50%, -50%);
+  transition: width .3s, height .3s;
+  z-index: 10;
+}
+
+.hover {
+  height: 50px;
+  width: 50px
+}

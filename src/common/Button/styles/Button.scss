@@ -1,0 +1,86 @@
+@use '../../styles/vars';
+
+.button {
+  display: inline-block;
+  height: 55px;
+  line-height: 55px;
+  width: fit-content;
+  overflow: hidden;
+  position: relative;
+  background-color: transparent;
+  border: 2px solid #D8E6F166;
+  border-radius: 48px;
+  z-index: 1;
+  transition: vars.$link-and-button-transition;
+  color: vars.$color;
+  font-size: vars.$font-size;
+  margin-top: -8px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &:hover {
+    cursor: vars.$hover;
+  }
+
+  &:hover .label-up {
+    top: -100%;
+    animation: .3s forwards ease-in-out label-animation;
+  }
+
+  &:hover .label-down {
+    top: -100%;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    background: #FFF557;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    transition: top .3s ease-in-out;
+  }
+
+  &:hover:before {
+    top: 0;
+  }
+}
+
+.label-down {
+  display: block;
+  height: 100%;
+  top: 0%;
+  position: relative;
+  transition: .3s ease-in-out;
+}
+
+.label-up {
+  display: block;
+  height: 100%;
+  position: relative;
+  top: 0%;
+  transition: .3s ease-in-out;
+  color: #14161F;
+}
+
+.label-down__animated {
+  display: block;
+  height: 95%;
+  position: relative;
+  top: 0%;
+  transition: 0.3s;
+  animation: .3s forwards ease-in-out label-animation;
+}
+
+@keyframes label-animation {
+  from {
+    rotate: 25deg;
+  }
+
+  to {
+    rotate: 0deg
+  }
+}
+

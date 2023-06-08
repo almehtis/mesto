@@ -1,0 +1,32 @@
+.header {
+  display: grid;
+  text-align: center;
+
+  .header__title-and-logo-block {
+    display: grid;
+    row-gap: 1.8rem;
+    justify-items: center;
+  }
+
+  .header__title {
+    font-size: 47px;
+    width: 50%;
+    font-weight: 200;
+    margin-top: 15rem;
+    animation: header-title-animation 1s ease;
+  }
+}
+
+@keyframes header-title-animation {
+  0% {
+    -webkit-transform: translate(0px, 100px);
+    transform: translate(0px, 100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+

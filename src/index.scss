@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'TTNorms', sans-serif;
+  src: url(/public/fonts/TTNorms-Regular.woff2);
+}
+
+:root {
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #14161F;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  cursor: none;
+}
+
+body {
+  font-family: 'TTNorms', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: #D8E6F1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #213547;
+    background-color: #14161F;
+  }
+}

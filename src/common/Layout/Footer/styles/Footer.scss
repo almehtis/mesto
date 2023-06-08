@@ -1,0 +1,27 @@
+.footer {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: top;
+  color: #D8E6F1;
+  width: 100%;
+  padding-left: .6rem;
+  padding-right: .6rem;
+  font-size: 1.1rem;
+  margin-top: -.8rem;
+
+  .footer__contacts {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 4.5rem;
+  }
+
+  .footer__privacy-policy {
+    display: grid;
+    margin-left: 3rem;
+  }
+
+  .footer__developed-by {
+    margin-right: 1rem;
+  }
+}

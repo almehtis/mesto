@@ -1,0 +1,32 @@
+@use '../../styles/vars';
+
+.link {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  width: fit-content;
+  overflow: hidden;
+  position: relative;
+  background-color: transparent;
+  z-index: 1;
+  transition: vars.$link-and-button-transition;
+  color: vars.$color;
+  font-size: vars.$font-size;
+
+  &:hover {
+    cursor: vars.$hover;
+  }
+
+  &:hover .label-up {
+    top: -100%;
+    animation: .3s forwards ease-in-out label-animation;
+    color: vars.$color;
+    text-decoration: underline;
+  }
+
+  &:hover .label-down {
+    top: -100%;
+  }
+}
+
+
