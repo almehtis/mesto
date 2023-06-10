@@ -1,4 +1,5 @@
 import { Layout } from './common/Layout'
+import { CustomCursor } from './common/CustomCursor'
 import './App.scss'
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
       <Layout>
       </Layout>
+      <CustomCursor />
     </>
   )
 }

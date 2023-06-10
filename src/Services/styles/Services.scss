@@ -1,0 +1,21 @@
+.services-section {
+  background-color: azure;
+  height: 139rem;
+  color: black;
+  position: relative;
+
+
+  .services-section__marquee {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    position: absolute;
+    background-color: #FFF557;
+    width: 10rem;
+    height: 3rem;
+    width: 110%;
+    rotate: 5deg;
+    margin-top: 5.6rem;
+    margin-left: -2rem;
+  }
+}

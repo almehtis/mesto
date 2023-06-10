@@ -1,27 +1,106 @@
 .footer {
-  display: grid;
-  grid-auto-flow: column;
-  justify-content: space-between;
-  align-items: top;
+  align-items: end;
   color: #D8E6F1;
   width: 100%;
+  height: 56rem;
   padding-left: .6rem;
   padding-right: .6rem;
   font-size: 1.1rem;
   margin-top: -.8rem;
+  position: relative;
+  overflow: hidden;
 
-  .footer__contacts {
+  .footer__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+
+    .footer__background__first-item {
+      margin-top: 40rem;
+      margin-left: -40rem;
+      rotate: 20deg;
+      width: 103rem;
+      height: 18rem;
+      filter: blur(100px);
+      mix-blend-mode: lighten;
+      animation: footer-background-animation 25s ease-in-out;
+      animation-iteration-count: infinite;
+    }
+
+    .footer__background__second-item {
+      margin-top: -10rem;
+      margin-left: 20rem;
+      rotate: 150deg;
+      width: 103rem;
+      height: 18rem;
+      filter: blur(100px);
+      mix-blend-mode: lighten;
+      animation: footer-background-animation 15s ease-in-out;
+      animation-iteration-count: infinite;
+    }
+
+    .footer__background__third-item {
+      margin-top: -30rem;
+      width: 50rem;
+      height: 18rem;
+      filter: blur(100px);
+      mix-blend-mode: lighten;
+      animation: footer-background-animation 20s ease-in-out;
+      animation-iteration-count: infinite;
+    }
+
+    .footer__background__fourth-item {
+      margin-top: -20rem;
+      margin-left: 20rem;
+      rotate: 20deg;
+      width: 103rem;
+      height: 18rem;
+      filter: blur(100px);
+      mix-blend-mode: lighten;
+      animation: footer-background-animation 10s ease-in-out;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  .footer__links {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 16rem;
+    position: absolute;
+    bottom: 5.3rem;
+  }
+
+  .footer__links__contacts {
     display: grid;
     grid-auto-flow: column;
     column-gap: 4.5rem;
   }
 
-  .footer__privacy-policy {
+  .footer__links__privacy-policy {
     display: grid;
-    margin-left: 3rem;
+    margin-left: 5rem;
+  }
+}
+
+@keyframes footer-background-animation {
+  0% {
+    rotate: 0deg;
   }
 
-  .footer__developed-by {
-    margin-right: 1rem;
+  25% {
+    rotate: -7.5deg
+  }
+
+  50% {
+    rotate: -15deg
+  }
+
+  75% {
+    rotate: 7.5deg
+  }
+
+  100% {
+    rotate: 0deg
   }
 }
