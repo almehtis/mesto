@@ -27,7 +27,7 @@
       rotate: 150deg;
       width: 103rem;
       height: 18rem;
-      filter: blur(100px);
+      filter: blur(6rem);
       mix-blend-mode: lighten;
       animation: header-background-animation 15s ease-in-out;
       animation-iteration-count: infinite;
@@ -85,22 +85,30 @@
 
   .header__title-and-logo-block {
     display: grid;
-    row-gap: 1.8rem;
     justify-items: center;
-    height: 49rem;
+    height: 46rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
 
     .header__title {
-      font-size: 47px;
-      width: 50%;
-      font-weight: 200;
-      margin-top: 15rem;
-      animation: header-title-animation 1s ease;
-      color: #14161F;
+      font-size: 3rem;
+      width: 45%;
+      line-height: 2.5rem;
+      font-weight: 500;
+      margin-top: 14.7rem;
+      animation: header-title-animation 1s;
+      animation-timing-function: cubic-bezier(0,-0.01,.25,1);
+      color: var(--black-color);
     }
 
     .header__logo {
-      margin-top: -4rem;
-      animation: header-logo-animation 1s ease;
+      justify-self: start;
+      width: 98%;
+      height: 100%;
+      margin-left: 1rem;
+      margin-top: -1.5rem;
+      animation: header-logo-animation 1s;
+      animation-timing-function: cubic-bezier(0,-0.01,.25,1);
     }
   }
 
@@ -110,8 +118,9 @@
     height: 32rem;
     font-size: 4.75rem;
     line-height: 4.5rem;
-    background-color: #14161F;
+    background-color: var(--black-color);
     align-self: center;
+    letter-spacing: -.18rem;
 
     .header__description__icon {
       vertical-align: middle;
@@ -121,8 +130,8 @@
 
 @keyframes header-title-animation {
   0% {
-    -webkit-transform: translate(0px, 100px);
-    transform: translate(0px, 100px);
+    -webkit-transform: translate(0, 6rem);
+    transform: translate(0, 6rem);
     opacity: 0;
   }
   100% {
@@ -134,8 +143,8 @@
 
 @keyframes header-logo-animation {
   0% {
-    -webkit-transform: translate(0px, 300px);
-    transform: translate(0px, 300px);
+    -webkit-transform: translate(0px, 19rem);
+    transform: translate(0px, 19rem);
     opacity: 0;
   }
   100% {

@@ -1,14 +1,13 @@
 .footer {
   align-items: end;
-  color: #D8E6F1;
-  width: 100%;
-  height: 56rem;
-  padding-left: .6rem;
-  padding-right: .6rem;
+  color: var(--white-color);
+  height: 66rem;
   font-size: 1.1rem;
   margin-top: -.8rem;
   position: relative;
   overflow: hidden;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
   .footer__background {
     position: absolute;
@@ -22,7 +21,7 @@
       rotate: 20deg;
       width: 103rem;
       height: 18rem;
-      filter: blur(100px);
+      filter: blur(6rem);
       mix-blend-mode: lighten;
       animation: footer-background-animation 25s ease-in-out;
       animation-iteration-count: infinite;
@@ -66,9 +65,14 @@
   .footer__links {
     display: grid;
     grid-auto-flow: column;
-    column-gap: 16rem;
+    column-gap: 13.5rem;
     position: absolute;
-    bottom: 5.3rem;
+    bottom: 15rem;
+    color: var(--black-color);
+
+    :nth-child(3) {
+      margin-left: 2.5rem;
+    }
   }
 
   .footer__links__contacts {
@@ -79,7 +83,14 @@
 
   .footer__links__privacy-policy {
     display: grid;
-    margin-left: 5rem;
+    margin-left: 5.5rem;
+  }
+
+  .footer__large-link {
+    position: absolute;
+    bottom: 1rem;
+    margin-left: .5rem;
+    color: var(--black-color);
   }
 }
 
@@ -101,6 +112,16 @@
   }
 
   100% {
+    rotate: 0deg
+  }
+}
+
+@keyframes footer__large-link__label-animation {
+  from {
+    rotate: 8deg;
+  }
+
+  to {
     rotate: 0deg
   }
 }

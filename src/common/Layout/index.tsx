@@ -1,6 +1,7 @@
 import { ReactNode, memo } from "react"
 import { Footer } from "./Footer"
 import { Header } from "./Header"
+import './styles/Layout.scss'
 
 export const Layout = memo(function Layout(props: {
   children: ReactNode
@@ -10,7 +11,6 @@ export const Layout = memo(function Layout(props: {
       <Header />
       {props.children}
       <Footer />
-      <a href="/">Обсудить задачу</a>
     </div>
   )
 })

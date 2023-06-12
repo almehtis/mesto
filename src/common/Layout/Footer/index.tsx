@@ -1,5 +1,5 @@
 import { memo } from "react"
-import { Link } from "../../Link"
+import { LayoutLink } from "../LayoutLink"
 import "./styles/Footer.scss"
 
 export const Footer = memo(function Footer() {
@@ -37,20 +37,20 @@ export const Footer = memo(function Footer() {
 
       <div className="footer__links">
         <div className="footer__links__contacts">
-          <Link text="+79856402997" />
-          <Link text="CONTACT@BRANDMESTA.RU" />
+          <LayoutLink isFooterLink text="+79856402997" />
+          <LayoutLink isFooterLink text="CONTACT@BRANDMESTA.RU" />
         </div>
 
 
         <div className="footer__links__privacy-policy">
           <span>Все права защищены ©2023</span>
-          <Link text="Политика конфиденциальности" />
+          <LayoutLink isFooterLink text="Политика конфиденциальности" />
         </div>
 
-        <div className="footer__links__developed-by">
-          <Link text="Разработано Friend Lee" />
-        </div>
+        <LayoutLink isFooterLink text="Разработано Friend Lee" />
       </div>
+
+      <LayoutLink className="footer__large-link" isLargeLink text="ОБСУДИТЬ ЗАДАЧУ" />
     </div>
   )
 })

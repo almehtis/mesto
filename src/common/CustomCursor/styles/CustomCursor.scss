@@ -1,9 +1,9 @@
 .custom-cursor {
   pointer-events: none;
   position: fixed;
-  width: 25px;
-  height: 25px;
-  background-color: #FFF557;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: var(--yellow-color);
   border-radius: 50%;
   mix-blend-mode: exclusion;
   transform: translate(-50%, -50%);
@@ -12,6 +12,6 @@
 }
 
 .hover {
-  height: 50px;
-  width: 50px
+  height: 3rem;
+  width: 3rem;
 }

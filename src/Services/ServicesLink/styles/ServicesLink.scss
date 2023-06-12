@@ -1,0 +1,33 @@
+.services-link {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: .4rem;
+  height: fit-content;
+
+  &:hover {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(41%) saturate(3350%) hue-rotate(328deg) brightness(105%) contrast(111%);
+  }
+
+  .services-link__services {
+    display: grid;
+    height: 9.5rem;
+    width: 28.4rem;
+    border-bottom: 3px solid var(--color);
+
+    .services-link__services__title-block {
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .services-link__services__title-block__title {
+      font-size: 1.8rem;
+    }
+
+    .services-link__services__description {
+      font-size: 1.1rem;
+      width: 70%;
+    }
+  }
+}
