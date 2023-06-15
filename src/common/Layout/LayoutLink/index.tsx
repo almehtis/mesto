@@ -26,9 +26,9 @@ export const LayoutLink = memo(function LayoutLink(props: {
     <a
       className={cn(
         {
-          "layout-footer-link": props.isFooterLink,
-          "layout-header-link": !props.isFooterLink && !props.isLargeLink,
-          "layout-large-link": props.isLargeLink
+          "layout__footer-link": props.isFooterLink,
+          "layout__header-link": !props.isFooterLink && !props.isLargeLink,
+          "layout__footer-link_large": props.isLargeLink
         },
 
         props.className

@@ -12,10 +12,10 @@ export const Button = memo(function Button(props: {
   return (
     <button
       onMouseEnter={() => {
-        setHover(true);
+        setHover(true)
       }}
       onMouseLeave={() => {
-        setHover(false);
+        setHover(false)
       }}
       className={cn(props.hasGradientBackground ? "gradient-button" : "button", props.classname)}
       type="button"

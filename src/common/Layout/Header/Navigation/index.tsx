@@ -1,4 +1,4 @@
-import { memo, useCallback, useState } from "react"
+import { memo, useCallback, useEffect, useState } from "react"
 import { Button } from "../../../Button"
 import { LayoutLink } from "../../LayoutLink"
 import './styles/Navigation.scss'
@@ -11,8 +11,13 @@ export const Navigation = memo(function Navigation() {
     setIsMenuOpen((open: boolean) => !open)
   }, [])
 
+  // Отключает скроллинг, если открыто мобильое меню
+  useEffect(() => {
+    isMenuOpen ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"
+  }, [isMenuOpen])
+
   return (
-    <div className={`navbar ${isMenuOpen ? "is-open" : ""}`}>
+    <div className={`navbar ${isMenuOpen ? "mobile-menu_open" : ""}`}>
       <LayoutLink className="navbar__logo" islogo src="/icons/Logotype.svg" />
 
       <ul className="navbar__links">

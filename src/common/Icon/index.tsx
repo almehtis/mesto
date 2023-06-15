@@ -25,7 +25,7 @@ export const Icon = memo(function Icon(props: {
   return (
     <img
       className={props.className}
-      src={`/icons/${props.name}.svg`}
+      src={`./icons/${props.name}.svg`}
       alt={`${props.name} icon`}
       onClick={props.onClick}
     />

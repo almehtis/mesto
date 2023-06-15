@@ -1,9 +1,10 @@
   .navbar {
+    top: 0;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    animation: shimmy 1s ease;
-    backdrop-filter: blur(1rem);
+    animation: show-navbar 1s var(--cubic-bezier);
+    backdrop-filter: blur(.2rem);
     font-size: 1rem;
 
     .navbar__button {
@@ -25,14 +26,12 @@
     }
   }
 
-  @keyframes shimmy {
+  @keyframes show-navbar {
     0% {
-      -webkit-transform: translate(0, 6.25rem);
       transform: translate(0, -6.25rem);
       opacity: 0;
     }
     100% {
-      -webkit-transform: translate(0, 0);
       transform: translate(0, 0);
       opacity: 1;
     }
@@ -57,14 +56,16 @@
       }
     }
 
-    .navbar.is-open {
+    .navbar.mobile-menu_open {
       position: fixed;
       inset: 0;
+      height: 100vh;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto 1fr 1fr;
-      background-color: green;
+      background-color: var(--black-color);
       overflow: hidden;
+      z-index: 30;
 
       .navbar__links {
         display: grid;
@@ -94,31 +95,9 @@
   }
 
 @media (min-width: 768px) and (max-windth: 1200px) {
-  .navbar.is-open {
+  .navbar.mobile-menu_open {
     .navbar__links {
       row-gap: 2rem;
-    }
-  }
-}
-
-@media(min-width: 1200px) {
-  .navbar {
-    padding: 1.5rem 2.5rem 1.5rem 2.5rem;
-    column-gap: 3rem;
-
-    .navbar__button {
-      width: 11.5rem;
-    }
-
-    .navbar__links {
-      grid-auto-flow: column;
-      column-gap: 5.5rem;
-      justify-content: right;
-      margin-left: -2.2rem;
-
-      :nth-child(3) {
-        margin-left: 8.5rem;
-      }
     }
   }
 }

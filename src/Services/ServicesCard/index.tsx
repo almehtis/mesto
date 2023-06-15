@@ -1,6 +1,5 @@
 import {  ReactNode, memo } from "react"
 import cn from 'classnames'
-import { Tag } from "../Tag"
 import './styles/ServicesCard.scss'
 
 const iconNames = ['gloube', 'snowflake', 'circle-arrow-up'] as const

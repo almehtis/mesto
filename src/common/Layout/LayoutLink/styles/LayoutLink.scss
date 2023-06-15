@@ -1,29 +1,30 @@
 @use '../../../styles/labels';
 
 @mixin mediaHover {
-  @media (hover: hover) {
-    &:hover {
-      cursor: none;
-    }
+  &:hover {
+    cursor: none;
+  }
 
-    &:hover .layout-link__label-up {
-      top: -100%;
-      animation: .3s forwards ease-in-out header-layout__label-animation;
-    }
+  &:hover .layout-link__label-down {
+    top: -100%;
+  }
 
-    &:hover .layout-link__label-down {
-      top: -100%;
-    }
-
-    &:hover:before {
-      top: 0;
-    }
+  &:hover:before {
+    top: 0;
   }
 }
 
-.layout-header-link {
+.layout__header-link {
   @include labels.layout-link;
-  @include mediaHover;
+
+  @media(hover: hover) {
+    @include mediaHover;
+
+    &:hover .layout-link__label-up {
+      top: -100%;
+      animation: .3s forwards ease-in-out header__label-animation;
+    }
+  }
 
   .layout-link__label-down {
     @include labels.label-down;
@@ -35,13 +36,21 @@
 
   .layout-link__label-down_animated {
     @include labels.label-down_animated;
-    animation: .3s forwards ease-in-out header-layout__label-animation;
+    animation: .3s header__label-animation ease-in-out;
   }
 }
 
-.layout-footer-link {
+.layout__footer-link {
   @include labels.layout-link;
-  @include mediaHover;
+
+  @media(hover: hover) {
+    @include mediaHover;
+
+    &:hover .layout-link__label-up {
+      top: -100%;
+      animation: .3s forwards ease-in-out footer__label-animation;
+    }
+  }
 
 
   .layout-link__label-down {
@@ -54,18 +63,25 @@
 
   .layout-link__label-down_animated {
     @include labels.label-down_animated;
-    animation: .3s forwards ease-in-out footer__label-animation;
+    animation: .3s forwards footer__label-animation ease-in-out;
   }
 }
 
-.layout-large-link {
+.layout__footer-link_large {
   @include labels.layout-link;
   height: 10rem;
   line-height: 10rem;
   font-size: 7rem;
   font-weight: 700;
 
-  @include mediaHover;
+  @media(hover: hover) {
+    @include mediaHover;
+
+    &:hover .layout-link__label-up {
+      top: -100%;
+      animation: .3s forwards ease-in-out large__label-animation;
+    }
+  }
 
   .layout-link__label-down {
     @include labels.label-down;
@@ -81,7 +97,7 @@
   }
 }
 
-@keyframes header-layout__label-animation {
+@keyframes header__label-animation {
   from {
     rotate: 25deg;
   }
@@ -103,7 +119,7 @@
 
 @keyframes large__label-animation {
   from {
-    rotate: 10deg;
+    rotate: 6deg;
   }
 
   to {

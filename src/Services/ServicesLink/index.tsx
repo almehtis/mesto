@@ -1,4 +1,4 @@
-import { memo, useState } from "react"
+import { memo } from "react"
 import './styles/ServicesLink.scss'
 import { Icon } from "../../common/Icon"
 
@@ -14,14 +14,10 @@ export const ServicesLink = memo(function ServicesLink(props: & (
     title: string
   }
 )) {
-  const [hover, setHover] = useState(true)
-
   return (
     <a
       className="services-link"
       href="https://friendlee.pro/"
-      onMouseEnter={() => {setHover(true)}}
-      onMouseLeave={() => {setHover(false)}}
       rel="stylesheet"
     >
       {props.hasDescription && <div className="services-link__service-block">
