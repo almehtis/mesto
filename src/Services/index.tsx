@@ -54,8 +54,11 @@ export const Services = memo(function Services() {
             subtitle="Хорошее начало."
             description="Комплексное погружение в контекст бизнеса, формирование цели и определение ключевых задач проекта"
           >
-            <Tag text="Анализ бизнес-модели" />
-            <Tag text="Анализ стейкхолдеров" />
+            <Tag text="Позиционирование" />
+            <Tag text="Характер и ценности бренда" />
+            <Tag text="Нейминг / слоган" />
+            <Tag text="Логотип и фирменный стиль" />
+            <Tag text="Брендбук" />
           </ServicesCard>
 
           <ServicesCard
@@ -81,20 +84,18 @@ export const Services = memo(function Services() {
             subtitle="Правильное решение для роста."
             description="Когда пора заявить о себе и продумать все до мелочей: от стратегической цели до креативных постов в социальных сетях и публикаций в СМИ"
           >
-            <Tag text="Медиаплан" />
-            <Tag text="Контент план" />
-            <Tag text="Постановка цели" />
-            <Tag text="Коммуникационная стратегия" />
-            <Tag text="Креативная концепция" />
-            <Tag text="Копирайтинг" />
-            <Tag text="Дизайн" />
+            <Tag text="Позиционирование" />
+            <Tag text="Характер и ценности бренда" />
+            <Tag text="Нейминг / слоган" />
+            <Tag text="Логотип и фирменный стиль" />
+            <Tag text="Брендбук" />
           </ServicesCard>
-      </div>
 
-      <div className="services-section__services">
-        <ServicesLink hasDescription title="Разработка сайта" description="Когда пришла пора действовать, но не хватает самого главного" />
-        <ServicesLink hasDescription title="Обучение" description="Когда ваша цель - лично во всем разобраться и стать экспертом" />
-        <ServicesLink hasDescription title="Консультации" description="Когда хочется сделать своими руками, но остались важные вопросы" />
+          <div className="services-section__services">
+            <ServicesLink hasDescription title="Разработка сайта" description="Когда пришла пора действовать, но не хватает самого главного" />
+            <ServicesLink hasDescription title="Обучение" description="Когда ваша цель - лично во всем разобраться и стать экспертом" />
+            <ServicesLink hasDescription title="Консультации" description="Когда хочется сделать своими руками, но остались важные вопросы" />
+          </div>
       </div>
 
       <Button classname="all-services-button" text="Все услуги" />

@@ -1,7 +1,10 @@
+@use '../../common/styles/background';
+@use '../../common/styles/svg';
+
 .header {
-  display: grid;
   text-align: center;
   position: relative;
+  overflow: hidden;
 
   .header__background {
     position: absolute;
@@ -9,94 +12,25 @@
     height: 100%;
     z-index: -10;
 
-    .header__background__first-item {
-      margin-top: 5rem;
-      margin-left: -20rem;
-      rotate: 20deg;
-      width: 103rem;
-      height: 18rem;
-      filter: blur(100px);
+    .header__background__element {
+      position: absolute;
+      filter: blur(3rem);
       mix-blend-mode: lighten;
-      animation: header-background-animation 25s ease-in-out;
+      animation: parallelogram-animation ease-in-out;
       animation-iteration-count: infinite;
-    }
-
-    .header__background__second-item {
-      margin-top: -5rem;
-      margin-left: 20rem;
-      rotate: 150deg;
-      width: 103rem;
-      height: 18rem;
-      filter: blur(6rem);
-      mix-blend-mode: lighten;
-      animation: header-background-animation 15s ease-in-out;
-      animation-iteration-count: infinite;
-    }
-
-    .header__background__third-item {
-      margin-top: -20rem;
-      margin-left: 60rem;
-      width: 50rem;
-      height: 18rem;
-      filter: blur(100px);
-      mix-blend-mode: lighten;
-      animation: header-background-animation 20s ease-in-out;
-      animation-iteration-count: infinite;
-    }
-
-    .header__background__fourth-item {
-      margin-top: -10rem;
-      margin-left: -20rem;
-      rotate: 20deg;
-      width: 103rem;
-      height: 18rem;
-      filter: blur(100px);
-      mix-blend-mode: lighten;
-      animation: header-background-animation 10s ease-in-out;
-      animation-iteration-count: infinite;
-    }
-
-    .header__background__fifth-item {
-      margin-top: 0rem;
-      margin-left: -20rem;
-      rotate: 20deg;
-      width: 103rem;
-      height: 18rem;
-      filter: blur(100px);
-      mix-blend-mode: lighten;
-      animation: header-background-animation 10s ease-in-out;
-      width: 103rem;
-      height: 18rem;
-    }
-
-    .header__background__sixth-item {
-      margin-top: -10rem;
-      margin-left: 15rem;
-      rotate: 10deg;
-      width: 103rem;
-      height: 18rem;
-      filter: blur(100px);
-      mix-blend-mode: lighten;
-      animation: header-background-animation 10s ease-in-out;
-      width: 103rem;
-      height: 18rem;
     }
   }
 
   .header__title-and-logo-block {
     display: grid;
-    justify-items: center;
-    height: 46rem;
-    padding-left: 1.6rem;
-    padding-right: 1.6rem;
+    text-align: center;
 
     .header__title {
       font-size: 3rem;
-      width: 45%;
-      line-height: 2.5rem;
+      width: 100%;
       font-weight: 500;
       margin-top: 14.7rem;
-      animation: header-title-animation 1s;
+      animation: parallelogram-animation ease-in-out;
       animation-timing-function: cubic-bezier(0,-0.01,.25,1);
       color: var(--black-color);
     }
@@ -105,9 +39,7 @@
       justify-self: start;
       width: 98%;
       height: 100%;
-      margin-left: 1rem;
-      margin-top: -1.5rem;
-      animation: header-logo-animation 1s;
+      animation: parallelogram-animation ease-in-out;
       animation-timing-function: cubic-bezier(0,-0.01,.25,1);
     }
   }
@@ -115,9 +47,8 @@
   .header__description-block {
     display: grid;
     place-content: center;
-    height: 32rem;
-    font-size: 4.75rem;
-    line-height: 4.5rem;
+    z-index: -10;
+
     background-color: var(--black-color);
     align-self: center;
     letter-spacing: -.18rem;
@@ -141,6 +72,8 @@
   }
 }
 
+@include background.parallelogram-animation;
+
 @keyframes header-logo-animation {
   0% {
     -webkit-transform: translate(0px, 19rem);
@@ -154,26 +87,244 @@
   }
 }
 
+@media (min-width: 360px) and (max-width: 768px) {
+  .header {
+    .header__background {
+      .header__background__element {
+        width: svg.$background-element-s-width;
+        height: svg.$background-element-s-height;
+      }
 
-@keyframes header-background-animation {
-  0% {
-    rotate: 0deg;
-  }
+      :nth-child(1) {
+        top: 25rem;
+        left: 0rem;
+        animation-duration: 30s;
+      }
 
-  25% {
-    rotate: -7.5deg
-  }
+      :nth-child(2) {
+        top: 15rem;
+        left: 5rem;
+        animation-duration: 20s;
+      }
 
-  50% {
-    rotate: -15deg
-  }
+      :nth-child(3) {
+        top: 10rem;
+        left: 5rem;
+        rotate: -15deg;
+        animation-duration: 25s;
+      }
 
-  75% {
-    rotate: 7.5deg
-  }
+      :nth-child(4) {
+        top: 25rem;
+        left: -10rem;
+        animation-duration: 20s;
+      }
 
-  100% {
-    rotate: 0deg
+      :nth-child(5) {
+        top: 0rem;
+        left: 20rem;
+        animation-duration: 30s;
+      }
+
+      :nth-child(6) {
+        top: 12rem;
+        left: -15rem;
+        animation-duration: 30s;
+      }
+    }
+
+    .header__title-and-logo-block {
+      height: 36rem;
+
+      .header__title {
+        margin-top: 23rem;
+        font-size: 2rem;
+        width: 100%;
+        line-height: 1.7rem;
+      }
+
+      .header__logo {
+        justify-self: center;
+        width: 92%;
+        height: 100%;
+        margin-top: -7.5rem;
+        animation: header-logo-animation 1s;
+        animation-timing-function: cubic-bezier(0,-0.01,.25,1);
+      }
+    }
+
+    .header__description-block {
+      height: 20rem;
+      font-size: 2.3rem;
+      line-height: 2.5rem;
+
+      .header__description__icon {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
   }
 }
 
+@media(min-width: 768px) and (max-width: 1200px) {
+  .header {
+    .header__background {
+      .header__background__element {
+        width: svg.$background-element-m-width;
+        height: svg.$background-element-m-height;
+      }
+
+      :nth-child(1) {
+        top: 45rem;
+        left: 0rem;
+        animation-duration: 30s;
+      }
+
+      :nth-child(2) {
+        top: 35rem;
+        left: 10rem;
+        animation-duration: 20s;
+      }
+
+      :nth-child(3) {
+        top: 35rem;
+        left: 25rem;
+        rotate: -15deg;
+        animation-duration: 25s;
+      }
+
+      :nth-child(4) {
+        top: 35rem;
+        left: -20rem;
+        animation-duration: 20s;
+      }
+
+      :nth-child(5) {
+        top: 30rem;
+        left: 5rem;
+        animation-duration: 30s;
+      }
+
+      :nth-child(6) {
+        top: 25rem;
+        left: -15rem;
+        animation-duration: 30s;
+      }
+    }
+
+    .header__title-and-logo-block {
+      height: 60rem;
+
+      .header__title {
+        justify-self: center;
+        font-size: 1.9rem;
+        width: 70%;
+        margin-top: 43rem;
+        height: fit-content;
+      }
+
+      .header__logo {
+        width: 96%;
+        margin-top: -5rem;
+      }
+    }
+
+    .header__description-block {
+      height: 15rem;
+      font-size: 2.25rem;
+      line-height: 2.2rem;
+      vertical-align: middle;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      .header__description__icon {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    .header__background {
+      .header__background__element {
+        width: svg.$background-element-l-width;
+        height: svg.$background-element-l-height;
+      }
+
+      :nth-child(1) {
+        top: 25rem;
+        left: -25rem;
+        animation-duration: 30s;
+      }
+
+      :nth-child(2) {
+        top: 35rem;
+        left: -15rem;
+        animation-duration: 20s;
+      }
+
+      :nth-child(3) {
+        top: 15rem;
+        left: 25rem;
+        rotate: -15deg;
+        animation-duration: 25s;
+      }
+
+      :nth-child(4) {
+        top: 25rem;
+        left: 30rem;
+        animation-duration: 20s;
+      }
+
+      :nth-child(5) {
+        top: rem;
+        left: 20rem;
+        animation-duration: 30s;
+      }
+
+      :nth-child(6) {
+        top: 12rem;
+        left: -25rem;
+        animation-duration: 30s;
+      }
+    }
+
+    .header__title-and-logo-block {
+      height: 48.5rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      .header__title {
+        margin-top: 15.5rem;
+        justify-self: center;
+        font-size: 2.9rem;
+        line-height: 3rem;
+        width: 55%;
+      }
+
+      .header__logo {
+        justify-self: start;
+        width: 100%;
+        height: 100%;
+        margin-top: 4rem;
+        animation: header-logo-animation 1s;
+        animation-timing-function: cubic-bezier(0,-0.01,.25,1);
+      }
+    }
+
+    .header__description-block {
+      height: 33rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      font-size: 4.75rem;
+      line-height: 4rem;
+
+      .header__description__icon {
+        width: 3.3rem;
+        height: 3.3rem;
+      }
+    }
+  }
+}

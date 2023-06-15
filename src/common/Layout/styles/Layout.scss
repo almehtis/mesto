@@ -1,0 +1,10 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr/minmax(0/360)/1fr;
+}
+
+// @media (max-width: 360px) {
+//   .layout {
+//     background-color: gray;
+//   }
+// }

@@ -1,0 +1,35 @@
+// Миксины используются в компонентах Button и LayoutLink
+@mixin layout-link {
+  display: inline-block;
+  height: 2rem;
+  line-height: 2rem;
+  width: fit-content;
+  overflow: hidden;
+  background-color: transparent;
+  z-index: 1;
+  transition: .3s ease-in-out;
+}
+
+@mixin label-down {
+  display: block;
+  height: 100%;
+  top: 0%;
+  position: relative;
+  transition: .3s ease-in-out;
+}
+
+@mixin label-up {
+  display: block;
+  height: 100%;
+  position: relative;
+  top: 0%;
+  transition: .3s ease-in-out;
+}
+
+@mixin label-down_animated {
+  display: block;
+  height: 95%;
+  position: relative;
+  top: 0%;
+  transition: .3s;
+}

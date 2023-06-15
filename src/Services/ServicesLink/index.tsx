@@ -24,13 +24,13 @@ export const ServicesLink = memo(function ServicesLink(props: & (
       onMouseLeave={() => {setHover(false)}}
       rel="stylesheet"
     >
-      {props.hasDescription && <div className="services-link__services">
-        <div className="services-link__services__title-block">
-          <span className="services-link__services__title-block__title">{props.title}</span>
-          <Icon name="star" />
+      {props.hasDescription && <div className="services-link__service-block">
+        <div className="services-link__service-block__title-block">
+          <span className="services-link__service-block__title-block__title">{props.title}</span>
+          <Icon className="services-link__service-block__title-block__icon" name="star" />
         </div>
 
-        <p className="services-link__services__description">{props.description}</p>
+        <p className="services-link__service-block__description">{props.description}</p>
       </div>}
 
       {!props.hasDescription && <div className="services-link">

@@ -50,15 +50,12 @@ export const ServicesCard = memo(function ServicesCard(props: {
       </div>
 
       <div className="card__intro">
-        <h3 className="card__intro__subtitle">{props.subtitle}</h3>
+        <span className="card__intro__subtitle">{props.subtitle}</span>
         <p className="card__intro__description">{props.description}</p>
       </div>
 
       <div className="tags">
         {props.children}
-        <div className="tags_partition">
-          <Tag />
-        </div>
       </div>
     </div>
   )
