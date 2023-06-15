@@ -1,4 +1,4 @@
-import { memo, useState } from "react"
+import { memo, useCallback, useState } from "react"
 import cn from 'classnames'
 import { Icon } from "../../Icon"
 import './styles/LayoutLink.scss'
@@ -9,6 +9,8 @@ export const LayoutLink = memo(function LayoutLink(props: {
   | {
     islogo?: never
     isFooterLink?: boolean
+    isMailTo?: boolean
+    isTel?: boolean
     isLargeLink?: boolean
     text: string
   }
@@ -17,10 +19,27 @@ export const LayoutLink = memo(function LayoutLink(props: {
     src: string
     isFooterLink?: never
     isLargeLink?: never
+    isMailTo?: never
+    isTel?: never
     text?: never
   }
 )) {
   const [hover, setHover] = useState(true)
+  let href
+
+  useCallback(() => {
+    if(props.isMailTo) {
+      href = "mailto:contact@brandmesta.ru"
+    }
+
+    if(props.isTel) {
+      href =  "tel:+7 985 640 29 97"
+    }
+
+    if(!props.isMailTo && !props.isTel) {
+      href = "https://friendlee.pro/"
+    }
+  }, [])
 
   return (
     <a
@@ -33,7 +52,7 @@ export const LayoutLink = memo(function LayoutLink(props: {
 
         props.className
       )}
-      href="https://friendlee.pro/"
+      href={href}
       onMouseEnter={() => {setHover(true)}}
       onMouseLeave={() => {setHover(false)}}
       rel="stylesheet"

@@ -35,6 +35,11 @@
 }
 
 @media (min-width: 360px) and (max-width: 768px) {
+  .services-link {
+    letter-spacing: -.1rem;
+    column-gap: .5rem;
+  }
+
   .services-link__service-block {
     display: grid;
     height: 7.7rem;

@@ -17,12 +17,12 @@
       cursor: none;
     }
 
-    &:hover .label-up {
+    &:hover .button__label-up {
       top: -100%;
       animation: .3s forwards ease-in-out label-animation;
     }
 
-    &:hover .label-down {
+    &:hover .button__label-down {
       top: -100%;
     }
 
@@ -44,16 +44,16 @@
   }
 }
 
-.label-down {
+.button__label-down {
   @include labels.label-down;
 }
 
-.label-up {
+.button__label-up {
   @include labels.label-up;
   color: var(--black-color);
 }
 
-.label-down_animated {
+.button__label-down_animated {
   @include labels.label-down_animated;
   animation: .3s forwards ease-in-out label-animation;
 }

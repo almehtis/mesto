@@ -37,8 +37,8 @@ export const Footer = memo(function Footer() {
 
       <div className="footer__links">
         <div className="footer__links__contacts">
-          <LayoutLink isFooterLink text="+7 985 640 29 97" />
-          <LayoutLink isFooterLink text="CONTACT@BRANDMESTA.RU" />
+          <LayoutLink isFooterLink isTel text="+7 985 640 29 97" />
+          <LayoutLink isFooterLink isMailTo text="CONTACT@BRANDMESTA.RU" />
         </div>
 
 

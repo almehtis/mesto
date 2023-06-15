@@ -95,7 +95,7 @@
     .footer__links {
       display: grid;
       grid-auto-flow: row;
-      margin-top: 24.5rem;
+      margin-top: 24rem;
 
       :nth-child(3) {
         grid-row-start: 2;
@@ -111,14 +111,15 @@
       }
 
       .footer__links__contacts {
-        margin-top: 4.5rem;
+        margin-top: 4.7rem;
         grid-auto-flow: row;
+        row-gap: .3rem;
         font-size: 1.3rem;
       }
     }
 
     .footer__large-link {
-      margin-top: 3.5rem;
+      margin-top: 3.4rem;
       font-size: 2rem;
       text-decoration: underline;
       font-size: 3rem;

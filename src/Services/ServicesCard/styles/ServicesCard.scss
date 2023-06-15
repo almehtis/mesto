@@ -2,7 +2,7 @@
   display: grid;
   height: fit-content;
 
-  .card-title-block {
+  .card__title-block {
     display: grid;
     place-items: center;
     text-align: center;
@@ -60,7 +60,7 @@
     }
   }
 
-  .tags {
+  .card__tags {
     position: relative;
     display: flex;
     flex-flow: row wrap;
@@ -77,7 +77,7 @@
       display: none;
     }
 
-    .card-title-block {
+    .card__title-block {
       padding: 0;
       font-size: 1.5rem;
 
@@ -107,7 +107,7 @@
       margin-top: -.5rem;
     }
 
-    .tags {
+    .card__tags {
       column-gap: .5rem;
       row-gap: .5rem;
       font-size: 1.1rem;
@@ -126,7 +126,7 @@
       display: none;
     }
 
-    .card-title-block {
+    .card__title-block {
       padding: 0;
       margin-top: -4rem;
 
@@ -156,7 +156,7 @@
       height: 4.3rem;
     }
 
-    .tags {
+    .card__tags {
       column-gap: .5rem;
       row-gap: .5rem;
       height: 4rem;
@@ -251,7 +251,7 @@
     }
   }
 
-  .tags {
+  .card__tags {
     column-gap: .5rem;
     row-gap: .5rem;
     font-size: 2rem;

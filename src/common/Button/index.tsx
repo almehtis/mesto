@@ -24,10 +24,10 @@ export const Button = memo(function Button(props: {
           <span>{props.text}</span>
       ) : (
         <>
-          <span className={hover ? "label-down" : "label-down_animated"}>
+          <span className={hover ? "button__label-down" : "button__label-down_animated"}>
             {props.text}
           </span>
-          <span className="label-up">{props.text}</span>
+          <span className="button__label-up">{props.text}</span>
         </>
       )}
     </button>

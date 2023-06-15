@@ -17,7 +17,7 @@ export const ServicesCard = memo(function ServicesCard(props: {
 }) {
   return (
     <div className={cn("card", props.className)}>
-      <div className="card-title-block">
+      <div className="card__title-block">
         <h3 className="card__title">
           {props.titleFirstWord}
           <br/>и{' '}
@@ -53,7 +53,7 @@ export const ServicesCard = memo(function ServicesCard(props: {
         <p className="card__intro__description">{props.description}</p>
       </div>
 
-      <div className="tags">
+      <div className="card__tags">
         {props.children}
       </div>
     </div>
