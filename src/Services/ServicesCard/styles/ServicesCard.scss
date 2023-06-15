@@ -23,7 +23,7 @@
     display: grid;
   }
 
-  .card-icon-wrapper {
+  .card__icon-wrapper {
     transition: all .5s;
     transition-timing-function: var(--cubic-vezier);
   }
@@ -35,7 +35,7 @@
       }
     }
 
-    &:hover .card-icon-wrapper {
+    &:hover .card__icon-wrapper {
       width: 7rem;
       height: 7rem;
     }
@@ -45,18 +45,11 @@
       color: var(--yellow-color);
     }
 
-    &:hover .card-icon-wrapper__svg * {
+    &:hover .card__icon-wrapper__svg * {
       width: 7rem;
       height: 7rem;
       transition-timing-function: var(--cubic-vezier);
       stroke: var(--yellow-color);
-    }
-
-    &:hover {
-      .tags_partition {
-        transform: translateY(100%);
-        opacity: 0;
-      }
     }
   }
 
@@ -101,7 +94,7 @@
       }
     }
 
-    .card-icon-wrapper {
+    .card__icon-wrapper {
       width: 4.2rem;
       height: 4.2rem;
       margin-top: -.5rem;
@@ -150,7 +143,7 @@
       }
     }
 
-    .card-icon-wrapper {
+    .card__icon-wrapper {
       margin-top: -.5rem;
       width: 4.3rem;
       height: 4.3rem;
@@ -191,7 +184,7 @@
       opacity: 0;
     }
 
-    .card-title-block {
+    .card__title-block {
       margin: 0;
       font-size: 2.2rem;
 
@@ -200,7 +193,7 @@
         padding-top: 0rem;
       }
 
-      .card-icon-wrapper {
+      .card__icon-wrapper {
         width: 13.75rem;
         height: 13.75rem;
       }
@@ -228,7 +221,7 @@
       }
     }
 
-    &:hover .card-icon-wrapper {
+    &:hover .card__icon-wrapper {
       width: 7rem;
       height: 7rem;
     }
@@ -238,14 +231,14 @@
       color: var(--yellow-color);
     }
 
-    &:hover .card-icon-wrapper__svg * {
+    &:hover .card__icon-wrapper__svg * {
       width: 7rem;
       height: 7rem;
       transition-timing-function: var(--cubic-vezier);
       stroke: var(--yellow-color);
     }
 
-    &:hover .tags {
+    &:hover .card__tags {
       transition: max-height 1s ease-in-out;
       max-height: 300rem;
     }

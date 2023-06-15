@@ -1,4 +1,4 @@
-import { memo, useCallback, useState } from "react"
+import { memo, useState } from "react"
 import cn from 'classnames'
 import { Icon } from "../../Icon"
 import './styles/LayoutLink.scss'
@@ -27,7 +27,7 @@ export const LayoutLink = memo(function LayoutLink(props: {
   const [hover, setHover] = useState(true)
   let href
 
-  useCallback(() => {
+  const checkProps = () => {
     if(props.isMailTo) {
       href = "mailto:contact@brandmesta.ru"
     }
@@ -39,7 +39,9 @@ export const LayoutLink = memo(function LayoutLink(props: {
     if(!props.isMailTo && !props.isTel) {
       href = "https://friendlee.pro/"
     }
-  }, [])
+  }
+
+  checkProps()
 
   return (
     <a

@@ -94,7 +94,13 @@
     }
   }
 
-@media (min-width: 768px) and (max-windth: 1200px) {
+@media (min-width: 768px) and (max-width: 1200px) {
+  .navbar {
+    .navbar__links {
+      grid-auto-flow: column;
+    }
+  }
+
   .navbar.mobile-menu_open {
     .navbar__links {
       row-gap: 2rem;
