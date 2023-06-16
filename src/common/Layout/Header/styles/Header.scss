@@ -16,7 +16,7 @@
       position: absolute;
       filter: blur(3rem);
       mix-blend-mode: lighten;
-      animation: parallelogram-animation ease-in-out;
+      animation: parallelogram-animation var(--cubic-bezier);
       animation-iteration-count: infinite;
     }
   }
@@ -31,8 +31,7 @@
       font-weight: 500;
       letter-spacing: -.1rem;
       margin-top: 14.7rem;
-      animation: parallelogram-animation ease-in-out;
-      animation-timing-function: cubic-bezier(0,-0.01,.25,1);
+      animation: header-title-animation 1s var(--cubic-bezier);
       color: var(--black-color);
     }
 
@@ -40,8 +39,7 @@
       justify-self: start;
       width: 98%;
       height: 100%;
-      animation: parallelogram-animation ease-in-out;
-      animation-timing-function: cubic-bezier(0,-0.01,.25,1);
+      animation: header-logo-animation 1s var(--cubic-bezier);
     }
   }
 
@@ -142,6 +140,8 @@
         font-size: 2rem;
         width: 100%;
         line-height: 1.7rem;
+        animation: parallelogram-animation ease-in-out;
+        animation-timing-function: cubic-bezier(0,-0.01,.25,1);
       }
 
       .header__title-and-logo-block__logo {
