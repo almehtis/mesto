@@ -1,12 +1,62 @@
-import { memo } from "react"
+import { memo, useLayoutEffect } from "react"
 import { Button } from "../common/Button"
 import { ServicesLink } from "./ServicesLink"
 import { ServicesCard } from "./ServicesCard"
 import { Icon } from "../common/Icon"
 import { Tag } from "./Tag"
+import gsap from 'gsap'
+import {ScrollTrigger} from 'gsap/ScrollTrigger'
 import './styles/Services.scss'
 
 export const Services = memo(function Services() {
+  // Пример анимации для карточек и блока с остальными услугами, находящимся под секцикй с карточками.
+
+  // gsap.registerPlugin(ScrollTrigger)
+
+  // useLayoutEffect(() => {
+  //   const cardsArray = gsap.utils.toArray<HTMLElement>(".services-section__cards__card")
+
+  //   gsap.to(cardsArray[0], {
+  //     yPercent: 20,
+  //     ease: "none",
+  //     scrollTrigger: {
+  //       trigger: ".services-section__title-and-links",
+  //       start: "bottom bottom",
+  //       scrub: true
+  //     }
+  //   })
+
+  //   gsap.to(cardsArray[1], {
+  //     yPercent: -34,
+  //     ease: "none",
+  //     scrollTrigger: {
+  //       trigger: ".services-section__title-and-links",
+  //       start: "bottom bottom",
+  //       scrub: true
+  //     }
+  //   })
+
+  //   gsap.to(cardsArray[2], {
+  //     yPercent: 3,
+  //     ease: "none",
+  //     scrollTrigger: {
+  //       trigger: ".services-section__title-and-links",
+  //       start: "bottom bottom",
+  //       scrub: true
+  //     }
+  //   })
+
+  //   gsap.to(".services-section__services", {
+  //     yPercent: -200,
+  //     ease: "none",
+  //     scrollTrigger: {
+  //       trigger: ".services-section__cards",
+  //       start: "top top",
+  //       scrub: true
+  //     }
+  //   })
+  // }, [])
+
   return (
     <div className="services-section">
       <div className="services-section__marquee">
